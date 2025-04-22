@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Spotlight & Discussions - CineCritic Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to the external CSS file -->
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div id="branding">
+        <h1>CineCritic Hub</h1>
+        <p>Discover, Discuss, and Dive into the World of Cinema.</p>
+      </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="reviews.html">Reviews & Critics</a></li>
+        <li>
+          <a href="local-spotlight.html">Local Spotlight & Discussions</a>
+        </li>
+        <li><a href="dashboard.html">User Dashboard & Support</a></li>
+      </ul>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search movies, reviews, and more..."
+        >
+        <button id="search-btn">Search</button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Local Films Section -->
+      <section id="local-films">
+        <h2>Local Films</h2>
+        <div class="film-grid">
+          <div class="film-card">
+            <a href="#">
+              <img src="images/Chanters.jpg" alt="Local Film Title 1">
+              <p>Chanters</p>
+            </a>
+          </div>
+
+          <div class="film-card">
+            <a href="#">
+              <img src="images/Bagahe.jpg" alt="Local Film Title 2">
+              <p>Bagahe</p>
+            </a>
+          </div>
+
+          <div class="film-card">
+            <a href="#">
+              <img src="images/Baconaua.jpg" alt="Local Film Title 3">
+              <p>Baconaua</p>
+            </a>
+          </div>
+
+          <div class="film-card">
+            <a href="#">
+              <img src="images/Goyo.jpg" alt="Local Film Title 4">
+              <p>Goyo</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filmmaker Interviews Section -->
+      <section id="filmmaker-interviews">
+        <h2>Filmmaker Interviews</h2>
+        <div class="interview-grid">
+          <div class="interview-card">
+            <a href="#">
+              <img src="images/Martin-Interview.jpg" alt="Interview Title 1">
+              <p>Interview with Martin Scorsese</p>
+            </a>
+            <p>Brief description of the interview...</p>
+          </div>
+
+          <div class="interview-card">
+            <a href="#">
+              <img
+                src="images/Tim-Burton-Interview.jpg"
+                alt="Interview Title 2"
+              >
+              <p>Interview with Tim Burton</p>
+            </a>
+            <p>Brief description of the interview...</p>
+          </div>
+
+          <div class="interview-card">
+            <a href="#">
+              <img src="images/Local-Filmmaker1.png" alt="Interview Title 1">
+              <p>Interview with Local Filmmaker</p>
+            </a>
+            <p>Brief description of the interview...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Movie Discussions Forum Section -->
+      <section id="movie-discussions">
+        <h2>Movie Discussions</h2>
+        <div class="accordion">
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item">
+            <button class="accordion-button" type="button">
+              Is "Inception" Overrated?
+              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="accordion-content">
+              <p>Recently watched "Inception" and while I enjoyed it, I'm not sure it lives up to the massive hype. Thoughts?</p>
+              <p><i class="fas fa-comments"></i> Number of comments: 45</p>
+              <button class="join-discussion-btn">Join the Discussion</button>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item">
+            <button class="accordion-button" type="button">
+              Best Romantic Comedies of the 2000s
+              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                I'm in the mood for some rom-coms from the 2000s. Any
+                recommendations?
+              </p>
+              <p><i class="fas fa-comments"></i> Number of comments: 32</p>
+              <button class="join-discussion-btn">Join the Discussion</button>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item">
+            <button class="accordion-button" type="button">
+              "Parasite" - A Masterpiece or Just Hype?
+              <span class="icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                After watching "Parasite", I was blown away. But some of my
+                friends think it's just overhyped. What's your take?
+              </p>
+              <p><i class="fas fa-comments"></i> Number of comments: 67</p>
+              <button class="join-discussion-btn">Join the Discussion</button>
+            </div>
+          </div>
+
+          <!-- Add more accordion items as needed -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <!-- Newsletter Signup -->
+      <section id="newsletter">
+        <h2>Stay Updated!</h2>
+        <p>
+          Subscribe to our newsletter for the latest reviews, spotlights, and
+          discussions.
+        </p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </section>
+
+      <div id="social-media-icons">
+        <a
+          href="https://www.instagram.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a
+          href="https://www.snapchat.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-snapchat"></i>
+        </a>
+      </div>
+      <div id="copyright">&copy; 2023 CineCritic Hub. All rights reserved.</div>
+
+      <div class="tmdb-attribution">
+        <img src="images/TMDB.svg" alt="TMDB Logo" class="tmdb-logo">
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login to Participate</h2>
+        <form id="loginForm">
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+    
+  </body>
+</html>

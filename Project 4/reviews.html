@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews & Critics - CineCritic Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to the external CSS file -->
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div id="branding">
+        <h1>CineCritic Hub</h1>
+        <p>Discover, Discuss, and Dive into the World of Cinema.</p>
+      </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="reviews.html">Reviews & Critics</a></li>
+        <li>
+          <a href="local-spotlight.html">Local Spotlight & Discussions</a>
+        </li>
+        <li><a href="dashboard.html">User Dashboard & Support</a></li>
+      </ul>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search movies, reviews, and more..."
+        >
+        <button id="search-btn">Search</button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content-wrapper">
+      <!-- Main Content Section (Reviews and Filter & Sort) -->
+      <div class="main-content">
+        <!-- Reviews List Section -->
+        <section id="reviews-list">
+          <h2>Latest Reviews</h2>
+          <div class="reviews-grid">
+            <div class="movie-review">
+              <img src="images/Oppenheimer.jpg" alt="Movie Title 1 Poster">
+              <a href="#" class="movie-title">Oppenheimer</a>
+            </div>
+
+            <div class="movie-review">
+              <img src="images/Renfield.jpg" alt="Movie Title 2 Poster">
+              <a href="#" class="movie-title">Renfield</a>
+            </div>
+
+            <div class="movie-review">
+              <img src="images/SpiderMan.jpg" alt="Movie Title 3 Poster">
+              <a href="#" class="movie-title"
+                >Spider-Man Across The Spider-Verse</a
+              >
+            </div>
+
+            <div class="movie-review">
+              <img src="images/Inside.jpg" alt="Movie Title 4 Poster">
+              <a href="#" class="movie-title">Inside</a>
+            </div>
+
+            <div class="movie-review">
+              <img
+                src="images/Indiana-Jones-Raiders.jpg"
+                alt="Movie Title 5 Poster"
+              >
+              <a href="#" class="movie-title"
+                >Indiana Jones Raiders of the Lost Ark</a
+              >
+            </div>
+
+            <div class="movie-review">
+              <img
+                src="images/The-Dark-Knight.jpg"
+                alt="Movie Title 6 Poster"
+              >
+              <a href="#" class="movie-title">The Dark Knight</a>
+            </div>
+
+            <div class="movie-review">
+              <img src="images/Heat.jpg" alt="Movie Title 7 Poster">
+              <a href="#" class="movie-title">Heat</a>
+            </div>
+
+            <div class="movie-review">
+              <img src="images/Toy-Story.jpg" alt="Movie Title 8 Poster">
+              <a href="#" class="movie-title">Toy Story</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Filter and Sort Section -->
+        <section id="filter-sort">
+          <h2>Filter & Sort Reviews</h2>
+          <div class="filter-options">
+            <!-- Genre Filter -->
+            <select>
+              <option value="genre">Genre</option>
+              <option value="action">Action</option>
+              <option value="drama">Horror</option>
+              <option value="drama">Thriller</option>
+              <option value="drama">Romance</option>
+              <option value="drama">Comedy</option>
+            </select>
+
+            <!-- Release Date Filter -->
+            <select>
+              <option value="date">Release Date</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2022">2021</option>
+              <option value="2022">2020</option>
+              <option value="2022">2019</option>
+              <option value="2022">2018</option>
+              <option value="2022">2017</option>
+            </select>
+
+            <!-- Critic Rating Filter -->
+            <select>
+              <option value="rating">Critic Rating</option>
+              <option value="5">5 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="4">3 Stars</option>
+              <option value="4">2 Stars</option>
+              <option value="4">1 Stars</option>
+            </select>
+          </div>
+
+          <div class="sort-options">
+            <select>
+              <option value="recent">Most Recent</option>
+              <option value="top-rated">Top Rated</option>
+              <option value="top-rated">Least Rated</option>
+              <option value="top-rated">Top Grossing</option>
+              <option value="top-rated">Trending</option>
+            </select>
+          </div>
+        </section>
+      </div>
+
+      <!-- Featured Critics Section -->
+      <section id="featured-critics">
+        <h2>Featured Critics</h2>
+        <!-- Showcase featured critic profiles here -->
+        <div class="critic-container">
+          <div class="critic-card">
+            <img src="images/Profile-pic.png" alt="Critic Name 1">
+            <a href="#">Sara Avila</a>
+          </div>
+
+          <div class="critic-card">
+            <img src="images/Profile-pic.png" alt="Critic Name 2">
+            <a href="#">Sam Johnson</a>
+          </div>
+
+          <div class="critic-card">
+            <img src="images/Profile-pic.png" alt="Critic Name 3">
+            <a href="#">Robert Flores</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <!-- Newsletter Signup -->
+      <section id="newsletter">
+        <h2>Stay Updated!</h2>
+        <p>
+          Subscribe to our newsletter for the latest reviews, spotlights, and
+          discussions.
+        </p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </section>
+
+      <div id="social-media-icons">
+        <a
+          href="https://www.instagram.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a
+          href="https://www.snapchat.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-snapchat"></i>
+        </a>
+      </div>
+      <div id="copyright">&copy; 2023 CineCritic Hub. All rights reserved.</div>
+
+      <div class="tmdb-attribution">
+        <img src="images/TMDB.svg" alt="TMDB Logo" class="tmdb-logo">
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+      </div>
+    </footer>
+  </body>
+</html>

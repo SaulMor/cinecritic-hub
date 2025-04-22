@@ -1,0 +1,1080 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2E2E2E; 
+    color: #fff; 
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #8B0000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; 
+    padding: 20px;
+    margin-bottom: 20px;  /* Space between hero and carousel */
+    border-bottom: 3px solid #8B0000;  /* Decorative border */
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation styles */
+nav ul {
+    background-color: #444;
+    overflow: hidden;
+    color: white;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    padding: 0.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #555;
+}
+
+/* Main content styles */
+main {
+    min-height: 80vh;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Latest Reviews Section */
+#reviews {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;  
+    border-top: 3px solid #8B0000;
+    border-bottom: 3px solid #8B0000;  
+}
+
+#reviews h2 {
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;  
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.review-card {
+    background-color: #968686;  
+    padding: 10px;
+    border-radius: 5px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s ease;  
+}
+
+.review-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 5px;  
+}
+
+/* Modal Latest Reviews Details */
+.movie-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+.movie-modal.show {
+    display: block;
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+/* Modal Content */
+.movie-content {
+    background-color: #221e1e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #522626;
+    width: 40%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+    .movie-content {
+        width: 80%; 
+    }
+}
+
+/* The Close Button */
+.movie-content .close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25%;
+    font-size: 28px;
+    font-weight: bold;
+    transform: translateX(50%);
+}
+
+.movie-content .close:hover,
+.movie-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Content Styling */
+.movie-content h2 {
+    color: #e5e5e5;
+    font-size: 1.8em; 
+    margin-bottom: 0.5em;
+}
+
+.movie-content p {
+    color: #ccc;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1em; 
+}
+
+#modal-title {
+    color: #c9c3c3;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#modal-actors, #modal-summary {
+    color: #c9c3c3;
+    margin-bottom: 15px;
+}
+
+.movie-content .actors-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none; 
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.movie-content .actors-list li {
+    margin-right: 15px; /* Spacing between actor names */
+    color: #f5f5f5;
+}
+
+/* Divider style between title and content */
+.movie-content .divider {
+    border-bottom: 1px solid rgb(255, 255, 255); 
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Styles for read more button */
+.read-more {
+    text-decoration: none;
+    background: linear-gradient(to right, #8B0000, #D32F2F);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px black;
+    font-size: 1rem;
+    font-weight: light;
+    text-transform: capitalize;
+}
+
+.read-more:hover,
+.read-more:focus {
+    background-color: #e2e6ea; 
+    color: #dfa7a7;
+    text-decoration: none; 
+}
+
+.read-more:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+/* Local Film Highlights Section */
+#local-film-highlights {
+    padding: 20px;
+    
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#local-film-highlights h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.highlight-film-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.highlight-film-card {
+    width: 180px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.highlight-film-card img {
+    width: 180px; 
+    height: 270px; 
+    object-fit: cover; 
+    transition: transform 0.3s;
+}
+
+.highlight-film-card:hover img {
+    transform: scale(1.1);
+}
+
+.highlight-film-card h3 {
+    margin: 10px 0;
+}
+
+.highlight-film-card p {
+    padding: 0 10px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.highlight-film-card a:hover {
+    background-color: #6a0000;
+}
+
+/* ---------Footer styles---------- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+/* Utility classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#newsletter {
+    padding: 20px 0; 
+    margin: 20px 0; 
+}
+
+#newsletter h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#newsletter p {
+    margin-bottom: 20px;
+}
+
+#newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 60%; 
+    max-width: 400px; 
+}
+
+#newsletter button {
+    padding: 10px 20px;
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#newsletter button:hover {
+    background-color: #6a0000;
+}
+
+/* Social media icons */
+#social-media-icons a {
+    text-decoration: none;
+    color: #8B0000; 
+    margin-right: 10px; 
+}
+
+#social-media-icons a i {
+    font-size: 24px; 
+    transition: transform 0.3s; 
+}
+
+#social-media-icons a:hover i {
+    transform: scale(1.1); 
+}
+
+#social-media-icons a:last-child {
+    margin-right: 0; 
+}
+
+.tmdb-logo {
+    max-width: 100px; 
+    margin-right: 10px;
+  }
+  
+  .tmdb-attribution {
+    display: flex;
+    align-items: center;
+    
+  }
+
+/* Navigation styles with search feature */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    flex-grow: 1;
+}
+
+#search-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #fff;
+    color: #8B0000; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #f2f2f2;
+}
+
+/* Carousel */
+.carousel-heading {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.carousel-container {
+    width: 100%; 
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease;
+
+}
+
+.carousel-item {
+    flex: 0 0 100%; 
+    display: none; 
+    justify-content: center; 
+    align-items: center; 
+    height: 450px; 
+    overflow: hidden;
+    
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: 300ms opacity ease-in-out;
+    transition-delay: 300ms;
+
+}
+
+.carousel-item.active {
+    display: flex; 
+}
+
+.carousel-item img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+}
+
+.carousel-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    z-index: 100;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    color: #ddd;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.nav-item {
+    height: 11px;
+    width: 11px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    opacity: 1;
+}
+
+
+.prev, .next {
+    display: none; 
+}
+
+
+
+/* ---------Reviews and Critics---------- */
+
+.content-wrapper {
+    padding: 1rem 0;
+}
+#reviews-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem; 
+    border-bottom: 3px solid #8B0000;
+}
+
+#reviews-list {
+    flex: 3; 
+    margin-right: 2rem; 
+}
+
+#filter-sort {
+    flex: 1; 
+    max-width: 250px; 
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.movie-review {
+    flex-basis: calc(25% - 1rem); 
+    text-align: center; 
+}
+
+.movie-review img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s; 
+}
+
+.movie-review img:hover {
+    transform: scale(1.05); 
+}
+
+.movie-title {
+    display: block;
+    margin-top: 0.5rem;
+    color: #b14848;
+    text-decoration: none;
+}
+
+.movie-title:hover {
+    text-decoration: underline; 
+}
+
+/* Critic Profiles */
+.critic-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem; 
+}
+
+.critic-card img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+}
+
+.critic-card a {
+    color: #8B0000; 
+    text-decoration: none;
+    font-size: 1.2rem; 
+}
+
+.critic-card a:hover {
+    text-decoration: underline;
+}
+
+/* ----------- Local Spotlight % Discussions -------- */
+
+/* General styles for each section */
+section {
+    width: 100%; 
+    padding: 1rem; 
+    margin-bottom: 2rem; 
+}
+
+/* Local Films Section */
+#local-films h2 {
+    text-align: center;
+}
+
+.film-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.film-card {
+    flex: 1; 
+    max-width: calc(50% - 1rem); 
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #363434;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.film-card:hover {
+    transform: translateY(-5px);
+}
+
+.film-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Filmmaker Interviews Section */
+#filmmaker-interviews h2 {
+    text-align: center;
+}
+
+.interview-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+}
+
+.interview-card {
+    flex: 1; 
+    max-width: calc(30% - 1rem);
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #363434;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.interview-card:hover {
+    transform: translateY(-5px);
+}
+
+.interview-card img {
+    max-width: 300px; 
+    max-height: 400px; 
+    width: 100%; /* Ensures the image scales down if smaller than the max dimensions */
+    height: auto; /* Maintains the aspect ratio */
+}
+/* Styles for the discussion list */
+/* Accordinan */
+/* Styles for the accordion */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Adds space between accordion items */
+}
+
+.accordion-item {
+    background-color: #2E2E2E;
+    border: 1px solid #8B0000;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures content is contained within the border radius */
+}
+
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.accordion-button .icon {
+    margin-left: 10px; 
+}
+
+.accordion-button:hover {
+    background-color: #3A3A3A; 
+}
+
+.accordion-content {
+    background-color: #2E2E2E;
+    padding: 1rem;
+    display: none; /* Initially hidden */
+    border-top: 1px solid #8B0000;
+    overflow: hidden;
+    transition: height 0.5s ease-out;
+    height: 0;
+}
+
+.accordion-item.active .accordion-content {
+    height: var(--content-height); 
+}
+
+.accordion-content p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #FFFFFF;
+}
+
+/* Adjustments for active class */
+.accordion-item.active .accordion-content {
+    display: block; /* Show content when active */
+}
+
+/* Join the Discussion button  */
+.join-discussion-btn {
+    background: linear-gradient(to right, #8B0000, #D32F2F);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.join-discussion-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effects for discussion card retained */
+.discussion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #221e1e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #522626;
+    width: 40%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Login button */
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    opacity: 0.8;
+}
+
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 80%; 
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Input Fields */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%; 
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+}
+
+/* Additional Styling */
+.modal-content h2 {
+    margin-top: 0; 
+}
+
+  
+
+/* ----------------- User Dashboard & Support -----------------*/
+/* User Profile Section */
+#user-profile {
+    padding: 20px;
+    background-color: #585656; /* Light gray background for contrast */
+    border-radius: 5px;
+}
+
+#user-profile h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Profile Picture */
+.profile-picture img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire space without distortion */
+    border: 3px solid #8B0000; 
+}
+
+/* User Details */
+.user-details {
+    flex: 1; /* Takes up the remaining space */
+}
+
+.user-details p {
+    margin-bottom: 10px; /* Adds some spacing between details */
+}
+
+/* Edit Profile and Change Password Buttons */
+.profile-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-actions button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8B0000; 
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-actions button:hover {
+    background-color: #6a0000; /* Darker shade of red on hover */
+}
+
+/* User Saved Reviews Section */
+#saved-reviews {
+    padding: 20px;
+    background-color: #585656; /* Light gray background for contrast */
+    border-radius: 5px;
+    margin-top: 20px; /* Spacing from the previous section */
+}
+
+#saved-reviews h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reviews-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows the review cards to wrap to the next line if there's not enough space */
+    gap: 20px; /* Spacing between review cards */
+    justify-content: center; /* Centers the review cards */
+}
+
+.review-card {
+    width: 200px;
+    border: 1px solid #ddd; /* Light border for each review card */
+    border-radius: 5px;
+    overflow: hidden; /* Ensures content doesn't spill outside the card */
+    text-align: center;
+}
+
+.review-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s; /* Smooth scaling effect on hover */
+}
+
+.review-card:hover img {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
+
+.review-card h3 {
+    margin: 10px 0;
+}
+
+.review-card p {
+    padding: 0 10px; /* Adds some padding to the sides of the snippet text */
+    height: 60px; 
+    overflow: hidden; 
+}
+
+/* User Watchlist Section */
+#watchlist {
+    padding: 20px;
+    background-color: #585656; /* Light gray background for contrast */
+    border-radius: 5px;
+    margin-top: 20px; /* Spacing from the previous section */
+}
+
+#watchlist h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.watchlist-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows the cards to wrap to the next line if there's not enough space */
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Centers the cards */
+}
+
+.watchlist-card {
+    width: 200px; /* Adjust this value as needed */
+    border: 1px solid #ddd; /* Light border for each card */
+    border-radius: 5px;
+    overflow: hidden; /* Ensures content doesn't spill outside the card */
+    text-align: center;
+    position: relative; /* Allows for absolute positioning of child elements */
+}
+
+.watchlist-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s; /* Smooth scaling effect on hover */
+}
+
+.watchlist-card:hover img {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
+
+.watchlist-card h3 {
+    margin: 10px 0;
+}
+
+.remove-btn {
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #8B0000; 
+    color: #fff; 
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+.remove-btn:hover {
+    background-color: #6a0000; /* Slightly darker red on hover */
+}
+
+/* Contact Support Section */
+#contact-support {
+    padding: 20px;
+    background-color: #585656; /* Light gray background for contrast */
+    border-radius: 5px;
+    margin-top: 20px; /* Spacing from the previous section */
+}
+
+#contact-support h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact-support p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em; /* Slightly larger font for emphasis */
+}
+
+/* Form Styles */
+form {
+    max-width: 600px; /* Limit the width of the form */
+    margin: 0 auto; /* Center the form */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Spacing between form groups */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold; /* Bold font for labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width of the container */
+    padding: 10px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px;
+    font-size: 1em; /* Standard font size */
+    box-sizing: border-box; /* Ensures padding and border are included in the total width */
+}
+
+textarea {
+    resize: vertical; /* Allows users to resize the textarea vertically */
+}
+
+button[type="submit"] {
+    background-color: #8B0000; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Changes the cursor to a hand when hovering over the button */
+    font-size: 1.1em; /* Slightly larger font for the button */
+}
+
+button[type="submit"]:hover {
+    background-color: #6a0000; 
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineCritic Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to the external CSS file -->
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div id="branding">
+        <h1>CineCritic Hub</h1>
+        <p>Discover, Discuss, and Dive into the World of Cinema.</p>
+      </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="reviews.html">Reviews & Critics</a></li>
+        <li>
+          <a href="local-spotlight.html">Local Spotlight & Discussions</a>
+        </li>
+        <li><a href="dashboard.html">User Dashboard & Support</a></li>
+      </ul>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search movies, reviews, and more..."
+        >
+        <button id="search-btn">Search</button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero">
+        <h1>Welcome to CineCritic Hub!</h1>
+      </section>
+
+      <!-- Top Rated Movies Heading -->
+      <h2 class="carousel-heading">Top Rated Movies</h2>
+
+      <!-- Carousel Section -->
+      <section id="carousel">
+        <div class="carousel-container">
+          <!-- Carousel Buttons -->
+          <button class="carousel-btn left">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <!-- Carousel Items -->
+          <ul class="carousel">
+            <li class="carousel-item active">
+              <img src="images/topgun-poster.png" alt="Featured Movie 1" >
+            </li>
+            <li class="carousel-item">
+              <img src="images/The-Batman-Poster.jpg" alt="Featured Movie 2" >
+            </li>
+            <li class="carousel-item">
+              <img src="images/The-Godfather.jpg" alt="Featured Movie 3" >
+            </li>
+            <li class="carousel-item">
+              <img src="images/Oppenheimer.jpg" alt="Featured Movie 4" >
+            </li>
+            <li class="carousel-item">
+              <img src="images/FNAF.png" alt="Featured Movie 5">
+            </li>
+            <!-- Add more items as needed -->
+          </ul>
+          <!-- Carousel Buttons -->
+          <button class="carousel-btn right">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+          <!-- Carousel Navigation Dots -->
+          <div class="carousel-nav">
+            <div class="nav-item active"></div>
+            <div class="nav-item"></div>
+            <div class="nav-item"></div>
+            <div class="nav-item"></div>
+            <div class="nav-item"></div>
+            <!-- Add more dots as needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Reviews -->
+      <section id="reviews">
+        <h2>Latest Reviews</h2>
+        <div class="reviews-container">
+          <div class="review-card" data-movie-id="1495" >
+            <img src="images/Kingdom.jpg" alt="Movie Title" >
+            <h3>Kingdom of Heaven</h3>
+            <p>Short Review Snippet...</p>
+            <p>Reviewed by: John Smith</p>
+            <button class="read-more">Read More</button>
+        </div>
+    
+          <div class="review-card" data-movie-id="667538">
+            <img src="images/Transformers.jpg" alt="Movie Title" >
+            <h3>Transformers Rise of the Beasts</h3>
+            <p>Short Review Snippet...</p>
+            <p>Reviewed by: Stepth Greene</p>
+            <button class="read-more">Read More</button>
+          </div>
+
+          <div class="review-card" data-movie-id="1949">
+            <img src="images/Zodiac.jpg" alt="Movie Title" >
+            <h3>Zodiac</h3>
+            <p>Short Review Snippet...</p>
+            <p>Reviewed by: Tom</p>
+            <button class="read-more">Read More</button>
+          </div>
+
+          <div class="review-card" data-movie-id="569094">
+            <img src="images/SpiderMan.jpg" alt="Movie Title" >
+            <h3>Spider-Man Across The Spider-Verse</h3>
+            <p>Short Review Snippet...</p>
+            <p>Reviewed by: John Smith</p>
+            <button class="read-more">Read More</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Local Film Highlights Section -->
+    <section id="local-film-highlights">
+      <h2>Local Film Highlights</h2>
+      <div class="highlight-film-container">
+
+        <div class="highlight-film-card" data-movie-id="468211" >
+          <img src="images/Baconaua.jpg" alt="Local Film Title" >
+          <h3>Baconaua</h3>
+          <p>Brief Description of the Local Film...</p>
+          <button class="read-more">Read More</button>
+        </div>
+
+        <div class="highlight-film-card" data-movie-id="468220">
+          <img src="images/Bagahe.jpg" alt="Local Film Title" >
+          <h3>Bagahe</h3>
+          <p>Brief Description of the Local Film...</p>
+          <button class="read-more">Read More</button>
+        </div>
+
+        <div class="highlight-film-card" data-movie-id="466542">
+          <img src="images/Chanters.jpg" alt="Local Film Title" >
+          <h3>Instalado</h3>
+          <p>Brief Description of the Local Film...</p>
+          <button class="read-more">Read More</button>
+        </div>
+
+        <div class="highlight-film-card" data-movie-id="522449">
+          <img src="images/Goyo.jpg" alt="Local Film Title" >
+          <h3>Goyo</h3>
+          <p>Brief Description of the Local Film...</p>
+          <button class="read-more">Read More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <!-- Newsletter Signup -->
+      <section id="newsletter">
+        <h2>Stay Updated!</h2>
+        <p>
+          Subscribe to our newsletter for the latest reviews, spotlights, and
+          discussions.
+        </p>
+        <input type="email" placeholder="Enter your email" >
+        <button>Subscribe</button>
+      </section>
+
+      <div id="social-media-icons">
+        <a
+          href="https://www.instagram.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.tiktok.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a
+          href="https://www.snapchat.com/CineCritic_Hub/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-snapchat"></i>
+        </a>
+      </div>
+      <div id="copyright">&copy; 2023 CineCritic Hub. All rights reserved.</div>
+
+      <div class="tmdb-attribution">
+        <img src="images/TMDB.svg" alt="TMDB Logo" class="tmdb-logo">
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+      </div>
+
+    </footer>
+
+    <!-- Movie Details Modal -->
+  <div id="movieDetailsModal" class="movie-modal">
+    <div class="movie-content">
+      <span class="close">&times;</span>
+    <h2 id="modal-title">Movie Title</h2>
+    
+    <div class="divider"></div> 
+
+    <p id="modal-actors">Primary Actors:</p>
+    <p id="modal-summary">Summary:</p>
+    </div>
+  </div>
+
+  </body>
+</html>

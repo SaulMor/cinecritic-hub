@@ -2,7 +2,7 @@
 
 CineCritic Hub is an interactive movie review and information web application built using HTML, CSS, and JavaScript. It allows users to browse trending films, read brief reviews, and explore cast information using The Movie Database (TMDB) API. The project focuses on dynamic UI features like modals, carousels, accordions, and responsive layouts.
 
-> 📍 **Live Demo:** [View Project]([https://webpages.charlotte.edu/smorenoa/itis3135/Project%204/)
+> 📍 **Live Demo:** [View Project](https://webpages.charlotte.edu/smorenoa/itis3135/Project%204/)
 
 ---
 
